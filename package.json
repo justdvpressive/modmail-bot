@@ -1,0 +1,18 @@
+{
+  "name": "modmail",
+  "version": "1.0.0",
+  "description": "A modmail bot for Discord",
+  "main": "modmail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "moderation"
+  ],
+  "author": "AlphaKretin",
+  "license": "GPL-3.0+",
+  "dependencies": {
+    "discord.io": "github:izy521/discord.io"
+  }
+}
