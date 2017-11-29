@@ -161,7 +161,22 @@ bot.on('message', function(user, userID, channelID, message, event) {
 			}
 		}
 	}
+	let lowMessage = message.toLowerCase();
+	if (lowMessage.indexOf("<@" + bot.id + ">") > -1) {
+		help2(user, userID, channelID, message, event);
+		return;
+	}
 });
+
+function help2(user, userID, channelID, message, event) {
+	out = "I am a basic modmail bot made by AlphaKretin#7990!\n";
+	out += "You can find my source at <https://github.com/AlphaKretin/modmail-bot>\n";
+	out += "Server mods (or the owner if no mod role is defined) can see my commands with " + pre + "help!";
+	bot.sendMessage({
+		to: channelID,
+		message: out
+	});
+}
 
 function isMod(user, userID, channelID, message, event) {
 	let serverID = bot.channels[channelID] && bot.channels[channelID].guild_id;
